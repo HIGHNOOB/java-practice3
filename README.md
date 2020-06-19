@@ -1,8 +1,8 @@
 # java-practice3
 은행업무패키지
 * Bank (미구현)
- * BankAccountManager (구현중)
-  * BankAccount (완료)
+ ** BankAccountManager (구현중)
+  ** BankAccount (완료)
    * [init]
     * BankAccount()
     * BankAccount(String accountNumber, String accountHolder, int amount)
