@@ -22,7 +22,7 @@
   * [private String]
     * convertToDecimalFormat(int amount)
     
-![introduce image](/reademe images/test.jpg)
+![introduce image](/reademeimages/test.jpg)
 
 # 아 *이게뭐지*
 ## 아 뭐야
