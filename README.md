@@ -3,7 +3,7 @@
 * Bank (미구현)
 * BankAccountManager (구현중)
 * BankAccount (완료)
- **[init]
+ * * [init]
  ** BankAccount()
  * BankAccount(String accountNumber, String accountHolder, int amount)
  * [public boolean]
