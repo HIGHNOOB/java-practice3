@@ -10,7 +10,5 @@ public class mainBank {
 		ba.withDraw(45000);
 		ba.withDraw(15000);
 		ba.withDraw(300);
-
 	}
-
 }
