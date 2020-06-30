@@ -9,6 +9,5 @@ public class mainBank {
 		ba.deposit(20000);
 		ba.withDraw(45000);
 		ba.withDraw(15000);
-		ba.withDraw(300);
 	}
 }
