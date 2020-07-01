@@ -19,21 +19,11 @@ public class Character {
 		System.out.printf("%s 생성완료", name);
 	}
 	
-	String getmName() {
-		return mName;
-	}
-	
-	int getmLevel() {
-		return mLevel;
-	}
-	
-	ArrayList<Item> getmItems() {
-		return mItems;
-	}
-	
-	ArrayList<Skill> getmSkills() {
-		return mSkills;
-	}
+	public String getName() { return mName; }	
+	public int getLevel() { return mLevel; }	
+	public ArrayList<Item> getItems() { return mItems; }	
+	public ArrayList<Skill> getSkills() { return mSkills; }
+	public long getGUID() { return mGUID; }
 	
 	public boolean getItem(Item item) {
 		//TODO
