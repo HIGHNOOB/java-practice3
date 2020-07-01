@@ -13,23 +13,21 @@ public class Item {
 		mGUID = guid;
 	}
 	
-	int getItemCode() {
-		return mItemCode;
-	}
+	public String getName() { return mName; }
+	public int getItemCode() { return mItemCode; }	
+	public int getItemCount() {	return mItemCount; }
+	public long getGUID() { return mGUID; }
 	
-	void use() {
-		if(isUsable(mItemCode)) {
-			mItemCount -=1;
-			System.out.printf("%s을(를) 사용하였습니다.",mName);
-		}
-		else {
-			System.out.printf("사용가능한 아이템이 아님");
-		}
-			
-	}
+	public void addItemCount(int count) { mItemCount++; }
+	public void subItemCount(int count) { mItemCount--; }
 	
-	boolean isUsable(int itemCode) {
+	public boolean isUsable(int itemCode) {
 		//TODO:사용가능한 아이템인지 체크
+		return true;
+	}
+	
+	public boolean isCountable(int itemCode) {
+		//TODO:셀 수 있는 아이템인지 체크
 		return true;
 	}
 	
