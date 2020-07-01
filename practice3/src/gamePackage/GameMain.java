@@ -14,7 +14,7 @@ public class GameMain {
 		
 		CharacterManager.makeGUID();
 		
-
+ 
 
 	}
 
