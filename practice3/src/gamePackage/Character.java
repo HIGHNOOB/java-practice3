@@ -10,29 +10,29 @@ public class Character {
 	private ArrayList<Skill> mSkills;
 	private long mGUID;
 	
-	Character(String mName, long guid){
-		this.mName = mName;
-		this.mLevel = 1;
-		this.mItems = new ArrayList<Item>();
-		this.mSkills = new ArrayList<Skill>();
-		this.mGUID = guid;
-		System.out.printf("%s 생성완료", mName);
+	Character(String name, long guid){
+		mName = name;
+		mLevel = 1;
+		mItems = new ArrayList<Item>();
+		mSkills = new ArrayList<Skill>();
+		mGUID = guid;
+		System.out.printf("%s 생성완료", name);
 	}
 	
 	String getmName() {
-		return this.mName;
+		return mName;
 	}
 	
 	int getmLevel() {
-		return this.mLevel;
+		return mLevel;
 	}
 	
 	ArrayList<Item> getmItems() {
-		return this.mItems;
+		return mItems;
 	}
 	
 	ArrayList<Skill> getmSkills() {
-		return this.mSkills;
+		return mSkills;
 	}
 	
 	public boolean getItem(Item item) {
@@ -45,6 +45,6 @@ public class Character {
 		return true;
 	}
 	
-	//TODO 레벨업 ,돈
+	//TODO 레벨업 ,돈, hp, mp, 공격력?
 
 }
