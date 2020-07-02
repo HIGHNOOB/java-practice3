@@ -25,8 +25,8 @@ public class Character {
 	public ArrayList<Skill> getSkills() { return mSkills; }
 	public long getGUID() { return mGUID; }
 	
-	public boolean getItem(Item item) {
-		//TODO
+	public boolean addItem(Item item) {
+		mItems.add(item);
 		return true;
 	}
 	
@@ -35,6 +35,6 @@ public class Character {
 		return true;
 	}
 	
-	//TODO 레벨업 ,돈, hp, mp, 공격력?
+	//TODO 
 
 }

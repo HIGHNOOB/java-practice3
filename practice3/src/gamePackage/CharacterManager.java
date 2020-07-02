@@ -15,7 +15,9 @@ public class CharacterManager {
 		long guid =GUIDmanager.makeGUID(GUIDmanager.GUID_CHARACTER);
 		mCharacterNames.put(guid,name);
 		
-		return new Character(name,guid);
+		Character character = new Character(name,guid);
+		
+		return character;
 	}
 
 	public static boolean isNameDuplicated(String name) {
@@ -24,6 +26,11 @@ public class CharacterManager {
 			return true;
 		}
 		return false; 
+	}
+	//TODO 접근지정자 추가하셈
+	boolean giveItem(Character character, int itemCode, int count) {
+		//TODO ㄷㄷ
+		return true;
 	}
 
 }
