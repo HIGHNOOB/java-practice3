@@ -1,5 +1,7 @@
 package gamePackage;
 
+import java.util.ArrayList;
+
 public class World {
-	//TODO 캐릭터들이 모이는 공간
+	private ArrayList<Character> mCharacters;
 }
