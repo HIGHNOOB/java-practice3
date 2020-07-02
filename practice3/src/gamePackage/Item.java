@@ -6,7 +6,7 @@ public class Item {
 	private int mItemCount;
 	private long mGUID;
 	
-	Item(String name, int itemCode, int itemCount, long guid){
+	public Item(String name, int itemCode, int itemCount, long guid){
 		mName = name;
 		mItemCode = itemCode;
 		mItemCount = itemCount;
@@ -23,6 +23,7 @@ public class Item {
 	
 	public boolean isUsable(int itemCode) {
 		//TODO:사용가능한 아이템인지 체크
+		//TODO:parameter필요없을듯(this.itemcode사용)
 		return true;
 	}
 	
