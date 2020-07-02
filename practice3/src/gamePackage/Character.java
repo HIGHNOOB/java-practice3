@@ -16,7 +16,7 @@ public class Character {
 		mItems = new ArrayList<Item>();
 		mSkills = new ArrayList<Skill>();
 		mGUID = guid;
-		System.out.printf("%s 积己肯丰", name);
+		System.out.printf("[Character]%s 积己肯丰%n", name);
 	}
 	
 	public String getName() { return mName; }	

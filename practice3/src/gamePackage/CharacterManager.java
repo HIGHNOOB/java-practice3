@@ -4,21 +4,17 @@ import java.util.HashMap;
 
 public class CharacterManager {
 
-	private static HashMap<Long, String> mCharacterNames;
+	private static final HashMap<Long, String> mCharacterNames = new HashMap<Long, String>();
 
 	public static Character createCharacter(String name) {
 		if (isNameDuplicated(name)) {
-			System.out.printf("[캐릭터매니저] 생성실패");
+			System.out.printf("[CharacterManager] 생성실패%n");
 			return null;
 		}
-
+		
 		long guid =GUIDmanager.makeGUID(GUIDmanager.GUID_CHARACTER);
-		System.out.printf("[CharacterManager] %s:생성완료%n", name);
-		
-		
-		Character playerCharacter =new Character(name, guid);
-
 		mCharacterNames.put(guid,name);
+		
 		return new Character(name,guid);
 	}
 
