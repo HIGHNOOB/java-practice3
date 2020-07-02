@@ -12,8 +12,6 @@ public class CharacterManager {
 			return null;
 		}
 
-		Object nameObj = mCharacterNames.get(name);
-		
 		long guid =GUIDmanager.makeGUID(GUIDmanager.GUID_CHARACTER);
 		System.out.printf("[CharacterManager] %s:생성완료%n", name);
 		
@@ -29,7 +27,7 @@ public class CharacterManager {
 			System.out.printf("[CharacterManager] %s: 중복된 이름입니다.%n", name);
 			return true;
 		}
-		return false;
+		return false; 
 	}
 
 }
