@@ -15,5 +15,5 @@ public class GameMain {
 		System.out.printf("level: %d%n", jw3.getLevel());
 		System.out.printf("GUID: %d%n", jw3.getGUID());	
 		
-	}
+	} 
 }
