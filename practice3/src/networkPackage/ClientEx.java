@@ -16,19 +16,23 @@ public class ClientEx {
 			socket = new Socket("localhost",9999);
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+			System.out.println("서버에 접속하였습니다.");
 			while(true) {
-				System.out.print("보내기>>");
+				System.out.print("텍스트 입력>>");
 				String outputMessage = scanner.nextLine();
-				if(outputMessage.equalsIgnoreCase("bye")) {
+				if(outputMessage.equalsIgnoreCase("끝")) {
 					out.write(outputMessage + '\n');
 					out.flush();
 					break;
 				}
 				out.write(outputMessage + '\n');
 				out.flush();
+				/*
 				String inputMessage = in.readLine();
 				System.out.println("서버: " + inputMessage);
+				*/
 			}
+			System.out.println("연결을 종료합니다.");
 		} catch(IOException e) {
 			System.out.println(e.getMessage());
 		} finally {
