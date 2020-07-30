@@ -16,7 +16,32 @@ public class Character {
 		mItems = new ArrayList<Item>();
 		mSkills = new ArrayList<Skill>();
 		mGUID = guid;
-		System.out.printf("[Character]%s 생성완료%n", name);
+		
+		System.out.printf("[Character] >%s< 생성완료%n", name);
+		
+		initItems();
+		System.out.printf("[Character]기본 아이템 지급 완료%n");
+	}
+	
+	public void initItems() {
+		addItem(ItemDef.DORANS_BLADE,1);
+		addItem(ItemDef.CLOTH_ARMOR,1);
+		addItem(ItemDef.LEATHER_SHOSE,1);
+		addItem(ItemDef.HEALTH_POTION,3);
+	}
+	
+	public boolean addItem(int itemCode, int itemCount) {
+		Item item = ItemManager.getItemByItemCode(itemCode, itemCount);
+		if(item == null) {
+			return false;
+		}
+		mItems.add(item);
+		return true;
+	}
+	
+	public boolean removeItem(long guid) {
+		//TODO GUID를이용하여 아이템 삭제
+		return true;
 	}
 	
 	public String getName() { return mName; }	
@@ -24,17 +49,4 @@ public class Character {
 	public ArrayList<Item> getItems() { return mItems; }	
 	public ArrayList<Skill> getSkills() { return mSkills; }
 	public long getGUID() { return mGUID; }
-	
-	public boolean addItem(Item item) {
-		mItems.add(item);
-		return true;
-	}
-	
-	public boolean removeItem(long guid) {
-		//TODO
-		return true;
-	}
-	
-	//TODO 
-
 }

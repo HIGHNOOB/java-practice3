@@ -27,14 +27,9 @@ public class CharacterManager {
 		}
 		return false; 
 	}
-	//TODO 접근지정자 추가하셈
 	boolean giveItem(Character character, int itemCode, int count) {
-		//TODO ㄷㄷ
+		character.addItem(itemCode, count);
 		return true;
-	}
-	
-	void initItem(Character character) {
-		character.addItem(ItemDef.BF_SWORD);
 	}
 
 }
