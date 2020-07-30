@@ -32,5 +32,9 @@ public class CharacterManager {
 		//TODO ¤§¤§
 		return true;
 	}
+	
+	void initItem(Character character) {
+		character.addItem(ItemDef.BF_SWORD);
+	}
 
 }
