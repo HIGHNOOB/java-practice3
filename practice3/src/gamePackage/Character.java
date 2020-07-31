@@ -32,6 +32,7 @@ public class Character {
 	
 	public boolean addItem(int itemCode, int itemCount) {
 		ItemManager itemManager = new ItemManager();
+		//TODO 이렇게하면 itemManager가 계속 생성되어 성능이 떨어질수 있나?
 		Item item = itemManager.getItemByItemCode(itemCode, itemCount);
 		if(item == null) {
 			return false;
