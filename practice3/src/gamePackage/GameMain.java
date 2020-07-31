@@ -14,6 +14,7 @@ public class GameMain {
 		//System.out.printf("guid: %d%n", jw2.getGUID()); //name duplicated
 		
 		jw.showStats();
+		jw.showSkills();
 		jw.showItems();
 		
 	} 
