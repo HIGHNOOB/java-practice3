@@ -1,35 +1,27 @@
 package gamePackage;
 
 public class Skill {
-	
+
 	private String mName;
 	private int mSkillCode;
-	private double mCooldown;
-	
-	Skill(String name, int skillCode){
+	private long mGUID;
+	// TODO 쿨타임, 소모값등
+
+	Skill(String name, int skillCode, long guid) {
 		mName = name;
 		mSkillCode = skillCode;
-		mCooldown = 0;
+		mGUID = guid;
 	}
-	
+
 	void use() {
-		if(isUsable(mCooldown)) {
-			//TODO 스킬코드(mSkillCode)사용하는내용
-			System.out.printf("%s을(를) 사용하였습니다.",mName);
-		}
-		else {
-			System.out.printf("남은 쿨타임:%f",mCooldown);
-		}
-			
+		// TODO 스킬쓰는내용(쿨타임 소모값 타켓 등)
+		System.out.printf("%s!", mName);
 	}
-	
-	boolean isUsable(double cooldown) {
-		if(cooldown<=0) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	
+
+	String getSkillName() {	return mName; }
+
+	int getSkillCode() { return mSkillCode; }
+
+	long getSkillGUID() { return mGUID; }
+
 }
