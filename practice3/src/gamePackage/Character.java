@@ -16,18 +16,28 @@ public class Character {
 		mItems = new ArrayList<Item>();
 		mSkills = new ArrayList<Skill>();
 		mGUID = guid;
-		
-		System.out.printf("[Character] >%s< 생성완료%n", name);
-		
-		initItems();
-		System.out.printf("[Character]기본 아이템 지급 완료%n");
 	}
-	
-	public void initItems() {
-		addItem(ItemDef.DORANS_BLADE,1);
-		addItem(ItemDef.CLOTH_ARMOR,1);
-		addItem(ItemDef.LEATHER_SHOSE,1);
-		addItem(ItemDef.HEALTH_POTION,3);
+	public void showStats() {
+		System.out.printf("┌─── %s's stats ────────%n",mName);
+		System.out.printf("│ level: %d%n", mLevel);
+		System.out.printf("└───────────────────────────%n");
+	}
+	public void showSkills() {
+		
+	}
+	public void showItems() {
+		System.out.printf("┌─── %s's Item List ───%n",mName);
+		for(Item item : mItems){
+			if(item.getItemCount()>1) {
+				System.out.printf("│ %s * %d", item.getName(), item.getItemCount());
+			}
+			else {
+				System.out.printf("│ %s", item.getName());
+			}
+			
+			System.out.printf("%n");
+		}
+		System.out.printf("└───────────────────────────%n");
 	}
 	
 	public boolean addItem(int itemCode, int itemCount) {
