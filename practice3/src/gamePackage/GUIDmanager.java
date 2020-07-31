@@ -5,8 +5,8 @@ public class GUIDmanager {
 	public static int GUID_EIGENVAL = 0;
 
 	public static final int GUID_CHARACTER = 1001;
-
 	public static final int GUID_ITEM = 2001;
+	public static final int GUID_SKILL = 3001;
 
 	public static long makeGUID(int guidType) {
 		long GUID;

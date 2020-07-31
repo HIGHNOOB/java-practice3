@@ -1,7 +1,5 @@
 package gamePackage;
 
-import java.util.HashMap;
-
 public class ItemDef {
 	public static final int LONG_SWORD = 1001;
 	public static final int BF_SWORD = 1002;
@@ -16,6 +14,5 @@ public class ItemDef {
 	public static final int HEALTH_POTION = 3001;
 	public static final int MANA_POTION = 3002;
 	public static final int VISION_WARD = 3003;
-
 
 }
