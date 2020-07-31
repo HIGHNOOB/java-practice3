@@ -31,7 +31,8 @@ public class Character {
 	}
 	
 	public boolean addItem(int itemCode, int itemCount) {
-		Item item = ItemManager.getItemByItemCode(itemCode, itemCount);
+		ItemManager itemManager = new ItemManager();
+		Item item = itemManager.getItemByItemCode(itemCode, itemCount);
 		if(item == null) {
 			return false;
 		}

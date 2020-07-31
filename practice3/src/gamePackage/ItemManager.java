@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class ItemManager {
 
-	private static HashMap<Integer, String> mItemHashMap = new HashMap<Integer, String>();
+	private HashMap<Integer, String> mItemHashMap = new HashMap<Integer, String>();
 	
 	public ItemManager() {
 		initItems();
@@ -23,12 +23,13 @@ public class ItemManager {
 		mItemHashMap.put(ItemDef.MANA_POTION, "mana potion");
 		mItemHashMap.put(ItemDef.VISION_WARD, "vision ward");
 		
-		//TODO ↑↑↑↑이렇게하면 아이템이 추가될 때마다 코드를 두번(ItemDef에서 한번 이곳에서 한번) 입력하는데 다른 방법이?
-		//TODO 마찬가지로 여러 언어를 지원하려면 어떻게?		
-		
+		//TODO 수정해야 하는 이슈
+		//아이템 코드와 아이템 이름은 1:1매칭되기 때문에 hashMap을 사용하여 둘을 매칭함
+		//이로서 아이템 객체를 생성할 때 아이템 코드와 갯수만으로 만들 수 있음
+		//그러나 이렇게 구성할 경우 아이템이 추가될 때마다 코드를 두번(ItemDef에서 두번 작업해야 함) 입력해야 하는 점이 있음.
 	}
 	
-	public static Item getItemByItemCode(int itemCode, int itemCount) {
+	public Item getItemByItemCode(int itemCode, int itemCount) {
 	String itemName = mItemHashMap.get(itemCode);
 	if (itemName == null) {
 		System.out.printf("[ItemManager]코드와 일치하는 아이템을 찾을 수 없음\n");
