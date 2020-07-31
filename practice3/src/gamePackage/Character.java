@@ -25,9 +25,23 @@ public class Character {
 	}
 
 	public void showSkills() {
-
+		System.out.printf("┌─── %s's Skill List ───%n", mName);
+		for (Skill skill : mSkills) {
+			System.out.printf("│ %s", skill.getName());
+			System.out.printf("%n");
+		}
+		System.out.printf("└───────────────────────────%n");
 	}
 
+	public boolean addSkill(int skillCode) {
+		SkillManager skillManager = new SkillManager();
+		//TODO addItem과 같은이슈
+		Skill skill = skillManager.getSkillByCode(skillCode);
+		if (skill == null) { return false; }
+		mSkills.add(skill);
+		return true;
+	}
+	
 	public void showItems() {
 		System.out.printf("┌─── %s's Item List ───%n", mName);
 		for (Item item : mItems) {
@@ -46,9 +60,7 @@ public class Character {
 		ItemManager itemManager = new ItemManager();
 		// TODO 이렇게하면 itemManager가 계속 생성되어 성능이 떨어질수 있나?
 		Item item = itemManager.getItemByItemCode(itemCode, itemCount);
-		if (item == null) {
-			return false;
-		}
+		if (item == null) {	return false; }
 		mItems.add(item);
 		return true;
 	}

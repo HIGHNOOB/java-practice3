@@ -18,10 +18,10 @@ public class Skill {
 		System.out.printf("%s!", mName);
 	}
 
-	String getSkillName() {	return mName; }
+	String getName() {	return mName; }
 
-	int getSkillCode() { return mSkillCode; }
+	int getCode() { return mSkillCode; }
 
-	long getSkillGUID() { return mGUID; }
+	long getGUID() { return mGUID; }
 
 }
